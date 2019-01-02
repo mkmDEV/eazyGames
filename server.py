@@ -11,6 +11,13 @@ def home():
                            )
 
 
+@app.route("/typing-test")
+def typing_test():
+    return render_template('typingtest.html',
+                           page_title="typingTest",
+                           )
+
+
 if __name__ == '__main__':
     app.run(
         host='0.0.0.0',
