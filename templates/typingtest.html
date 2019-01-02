@@ -1,4 +1,11 @@
 {% extends 'layout.html' %}
+
+
+{% block head %}
+  <script src="{{ url_for('static', filename='js/typingtest.js') }}" type="text/javascript" defer></script>
+{% endblock head %}
+
+
 {% block content %}
 <div class="jumbotron">
   <div class="container text-center">
@@ -13,11 +20,10 @@
   <div class="row">
       <form>
         <div class="form-group">
-          <input type="button" class="btn" value="start typing test" name="start" onclick="startTimer()"><!-- TODO: Elég egy gomb a kettő helyett -->
-          <label for="type">Let's type!</label>
           <!-- TODO: area for sentence -->
           <textarea class="form-control" rows="5" id="type"></textarea>
-          <input type="button" class="btn" value="done"  name="stop" onclick="stopTimer()">
+          <button type="button" class="btn btn-success btn-lg btn-block" id="start-button">START!</button>
+          <button type="button" class="btn btn-danger btn-lg btn-block" id="stop-button">STOP!</button>
           <!-- TODO: modal for results -->
           <!-- TODO: Hibákhoz a backspacek leütéseit is számolja hozzá
                      Enter megnyomására álljon le a játék!-->
