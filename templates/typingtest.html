@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>{{ page_title }}</h1>
+    <p>How fast can You type?!</p>
+  </div>
+</div>
+
+<div class="container">&nbsp;</div>
+
+<div class="container">
+  <div class="row">
+      <form>
+        <div class="form-group">
+        <input type="button" class="btn" value="start typing test" name="start" onclick="startTimer()">
+          <label for="type">Let's type!</label>
+          <textarea class="form-control" rows="5" id="type"></textarea>
+        <input type="button" class="btn" value="done"  name="stop" onclick="stopTimer()">
+        </div>
+      </form>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="{{ url_for('home') }}">Back to Home</a>
+</footer>
+
+{% endblock %}
