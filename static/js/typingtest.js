@@ -12,6 +12,8 @@ document.getElementById('start-button').addEventListener('click', function () {
     document.getElementById('stop-button').classList.remove('d-none');
     document.getElementById('stop-button').style.display="block";
     document.getElementById('sentence').placeholder=sentences[Math.floor(Math.random()*sentences.length)];
+    document.getElementById('answer').value='';
+    document.getElementById('answer').focus();
 });
 
 document.getElementById('stop-button').addEventListener('click', function () {
