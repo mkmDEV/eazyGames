@@ -9,8 +9,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
-      <div class="card" style="width: 18rem;">
+    <div class="col-3">
+      <div class="card">
         <img class="card-img-top" src="https://placehold.it/150x80?text=IMAGE" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">BAGOLY VAGY PAPAGÁJ?</h5>
@@ -19,8 +19,9 @@
           <a href="{{ url_for('typing_test') }}" class="btn btn-primary">PLAY!</a>
         </div>
       </div>
-    </div><div class="col-sm-4">
-      <div class="card" style="width: 18rem;">
+    </div>
+    <div class="col-3">
+      <div class="card">
         <img class="card-img-top" src="https://placehold.it/150x80?text=IMAGE" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">VOMBAT</h5>
@@ -29,8 +30,9 @@
           <a href="{{ url_for('typing_test') }}" class="btn btn-primary">PLAY!</a>
         </div>
       </div>
-    </div><div class="col-sm-4">
-      <div class="card" style="width: 18rem;">
+    </div>
+    <div class="col-3">
+      <div class="card">
         <img class="card-img-top" src="https://placehold.it/150x80?text=IMAGE" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">TYPING TEST</h5>
@@ -40,9 +42,19 @@
         </div>
       </div>
     </div>
+    <div class="col-3">
+      <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/rpsls.jpg') }}" alt="Rock - Paper - Scissors - Lizard - Spock">
+        <div class="card-body">
+          <h5 class="card-title"><abbr title="Rock, Paper, Scissors, Lizard, Spock">RPSLS</abbr></h5>
+          <p class="card-text">Ezt a részt majd Taki megírja!</p>
+          <a href="{{ url_for('typing_test') }}" class="btn btn-primary">PLAY!</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<footer class="container-fluid text-center">
+<footer class="container-fluid text-center fixed-bottom">
   <p>Created by the famous and fantastic Take It Easy team</p>
 </footer>
 
