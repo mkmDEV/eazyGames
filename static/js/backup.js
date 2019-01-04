@@ -1,49 +1,3 @@
-let temp = document.querySelector('.time');
- 	let button = document.querySelector("button");
- 	let words = document.querySelector(".words");
- 	let timerDiv = document.querySelector(".time");
- 	let scoreDiv = document.querySelector(".score");
- 	let points = 0;
- 	let spans;
- 	let typed;
- 	let seconds = 60;
-    let modalBody = document.querySelector(".modal-body");
-  let spark = new Audio("http://k003.kiwi6.com/hotlink/qdpr7bioht/spark.mp3");
-
- 	function countdown() {
- 		points = 0;
- 		let timer = setInterval(function(){
- 			button.disabled = true;
-    		seconds--;
-    		temp.innerHTML = seconds;
-    		if (seconds === 0) {
-                modalBody.innerHTML = "You typed in " + points + " word correctly.";
-                $("#myModal").modal('show');
-    			scoreDiv.innerHTML = "0";
-    			words.innerHTML = "";
-    			button.disabled = false;
-    			clearInterval(timer);
-    			seconds = 60;
-    			timerDiv.innerHTML = "60";
-    			button.disabled = false;
-    		}
- 		}, 1000);
-  	}
-
-  	function random() {
-  		words.innerHTML = "";
-  		let random = Math.floor(Math.random() * (1943 - 0 + 1)) + 0;
-  		let wordArray = list[random].split("");
-  		for (let i = 0; i < wordArray.length; i++) {
-  			let span = document.createElement("span");
-  			span.classList.add("span");
-  			span.innerHTML = wordArray[i];
-  			words.appendChild(span);
-  		}
-  		spans = document.querySelectorAll(".span");
-  	}
-
-
   	const list = ['ACCOUNT','ACCURATE','ACRES','ACROSS','ACT','ACTION','ACTIVE','ACTIVITY',
   'ACTUAL','ACTUALLY','ADD','ADDITION','ADDITIONAL','ADJECTIVE','ADULT','ADVENTURE',
   'ADVICE','AFFECT','AFRAID','AFTER','AFTERNOON','AGAIN','AGAINST','AGE',
@@ -288,47 +242,17 @@ let temp = document.querySelector('.time');
   'YEAR','YELLOW','YES','YESTERDAY','YET','YOU','YOUNG','YOUNGER',
   'YOUR','YOURSELF','YOUTH','ZERO','ZOO'];
 
-  	button.addEventListener("click", function(e){
-  		countdown();
-  		random();
-  		button.disabled = true;
-  	});
+// BUTTONS
+document.getElementById('start-button').addEventListener('click', function () {
+    document.getElementById('start-button').style.display="none";
+    document.getElementById('stop-button').classList.remove('d-none');
+    document.getElementById('stop-button').style.display="block";
+    document.getElementById('sentence').placeholder=list[Math.floor(Math.random()*list.length)];
+    document.getElementById('answer').value='';
+    document.getElementById('answer').focus();
+});
 
-
-  	function typing(e) {
-  			typed = String.fromCharCode(e.which);
-  			for (let i = 0; i < spans.length; i++) {
-  				if (spans[i].innerHTML === typed) {
-  					if (spans[i].classList.contains("bg")) {
-  						continue;
-  					} else if (spans[i].classList.contains("bg") === false && spans[i-1] === undefined || spans[i-1].classList.contains("bg") !== false ) {
-  						spans[i].classList.add("bg");
-  						break;
-  					}
-  				}
-  			}
-  			let checker = 0;
-  			for (let j = 0; j < spans.length; j++) {
-  				if (spans[j].className === "span bg") {
-  					checker++;
-  				}
-  				if (checker === spans.length) {
-            spark.pause();
-					  spark.currentTime = 0;
-            spark.play();
-  					words.classList.add("animated");
-  					words.classList.add("fadeOut");
-  					points++;
-  					scoreDiv.innerHTML = points;
-  					document.removeEventListener("keydown", typing, false);
-  					setTimeout(function(){
-  						words.className = "words";
-  						random();
-  						document.addEventListener("keydown", typing, false);
-  					}, 400);
-  				}
-
-  			}
-  	}
-
-  	document.addEventListener("keydown", typing, false);
+document.getElementById('stop-button').addEventListener('click', function () {
+    document.getElementById('stop-button').style.display="none";
+    document.getElementById('start-button').style.display="block";
+});
