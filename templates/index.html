@@ -1,41 +1,50 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1>{{ page_title }}</h1>
-    <p>Easy as 1, 2, 3...</p>
-  </div>
-</div>
-
-<div class="container">&nbsp;</div>
-
-
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">BAGOLY VAGY PAPAGÁJ?</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+    <div class="col-3">
+      <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/bvp.png') }}" alt="Bagoly vagy papagáj">
+        <div class="card-body">
+          <h5 class="card-title">BAGOLY VAGY PAPAGÁJ?</h5>
+          <p class="card-text">Addictive grammar game with Hungarian language.</p>
+          <a href="https://bagoly-vagy-papagaj.herokuapp.com/" target="'_blank" class="btn btn-primary">PLAY!</a>
+        </div>
       </div>
     </div>
-    <div class="col-sm-4">
-      <div class="panel panel-danger">
-        <div class="panel-heading">VOMBAT</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+    <div class="col-3">
+      <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/vombat.png') }}" alt="Animal clicker">
+        <div class="card-body">
+          <h5 class="card-title">ANIMAL CLICKER</h5>
+          <p class="card-text">Every member wanted to call <span class="em font-weight-bold text-nowrap text-danger">Vombat Combat</span> except the author, who wanted animal petting simulator. <span class="text-nowrap">( ͡° ͜ʖ ͡°)</span></p>
+          <a href="https://protected-badlands-18006.herokuapp.com/" target="_black" class="btn btn-primary">PLAY!</a>
+        </div>
       </div>
     </div>
-    <div class="col-sm-4">
-      <div class="panel panel-success">
-        <div class="panel-heading">TYPINGTEST</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+    <div class="col-3">
+      <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/typing.png') }}" alt="Typing Test">
+        <div class="card-body">
+          <h5 class="card-title">TYPING TEST</h5>
+          <p class="card-text">Double your typing speed!</p>
+          <a href="{{ url_for('typing_test') }}" class="btn btn-primary">PLAY!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/rpsls.jpg') }}" alt="Rock - Paper - Scissors - Lizard - Spock">
+        <div class="card-body">
+          <h5 class="card-title"><abbr title="Rock, Paper, Scissors, Lizard, Spock">RPSLS</abbr></h5>
+          <p class="card-text">A hand game usually played between two people, but we are forever alone.</p>
+          <a href="#" class="btn btn-primary">PLAY!</a>
+        </div>
       </div>
     </div>
   </div>
-
-<footer class="container-fluid text-center">
+</div>
+<footer class="container-fluid text-center fixed-bottom">
   <p>Created by the famous and fantastic Take It Easy team</p>
 </footer>
 

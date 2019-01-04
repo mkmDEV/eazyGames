@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/typetest.css') }}">
+    <script src="{{ url_for('static', filename='js/typingtest.js') }}" type="text/javascript" defer></script>
+{% endblock head %}
+
+
+{% block content %}
+    <div class="container wrapper">
+        <button class="btn btn-success btn-block btn-lg">START</button>
+        <div class="outerWrap mt-5">
+            <div class="scoreWrap">
+                <p class="text-info">Score</p>
+                <span class="score text-info">0</span>
+            </div>
+            <div class="timeWrap">
+                <p class="text-info">Time left</p>
+                <span class="time text-info">60</span>
+            </div>
+        </div>
+        <div class="bg-dark">
+            <div class="wordsWrap">
+                <p class="words"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Time over!</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+
+    <footer class="container-fluid text-center fixed-bottom">
+      <a href="{{ url_for('home') }}">Back to Home</a>
+    </footer>
+
+{% endblock %}
