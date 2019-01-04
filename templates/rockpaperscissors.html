@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <script src="{{ url_for('static', filename='js/rockpaperscissors.js') }}" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rockpaperscissors.css') }}">
+
+{% endblock head %}
+
+
+{% block content %}
+    <h1>
+      <span class='title-rock'>Rock -</span>
+      <span class='title-paper'>Paper -</span>
+      <span class='title-scissors'>Scissors -</span>
+      <span class='title-lizard'>Lizard -</span>
+      <span class='title-spock'>Spock</span>
+    </h1>
+    <div class='scores'>
+        <p>Computer: <span class='computer-score'>0</span> | Player: <span class='player-score'>0</span></p>
+        <button class='resetScore'>Reset score</button>
+    </div>
+    <div class='game'>
+        <p id="computer">Computer: <span class="computer-guess"></span></p>
+        <p id="player">You: <span class="player-guess"></span></p>
+        <p id="resColor">Result: <span id="result"></span></p>
+    </div>
+    <div class='player-buttons'>
+        <button class='rock'>ROCK</button>
+        <button class='paper'>PAPER</button>
+        <button class='scissors'>SCISSORS</button>
+        <button class='lizard'>LIZARD</button>
+        <button class='spock'>SPOCK</button>
+    </div>
+       <footer class="container-fluid text-center fixed-bottom">
+            <a href="{{ url_for('home') }}">Back to Home</a>
+       </footer>
+{% endblock %}

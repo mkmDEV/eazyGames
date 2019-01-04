@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+{% include 'jumbotron.html' %}
 {% block content %}
 <div class="container">
   <div class="row">
@@ -38,7 +39,7 @@
         <div class="card-body">
           <h5 class="card-title"><abbr title="Rock, Paper, Scissors, Lizard, Spock">RPSLS</abbr></h5>
           <p class="card-text">A hand game usually played between two people, but we are forever alone.</p>
-          <a href="#" class="btn btn-primary">PLAY!</a>
+          <a href="{{ url_for('rpsls') }}" class="btn btn-primary">PLAY!</a>
         </div>
       </div>
     </div>

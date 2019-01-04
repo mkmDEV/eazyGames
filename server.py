@@ -20,6 +20,12 @@ def typing_test():
                            )
 
 
+@app.route("/rpsls")
+def rpsls():
+    return render_template('rockpaperscissors.html',
+                           page_title="Rock - Paper - Scissors - Lizard - Spock")
+
+
 if __name__ == '__main__':
     app.run(
         host='0.0.0.0',

@@ -1,0 +1,108 @@
+h1, h2, button {
+  font-family: Impact, charcoal, sans-serif;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+.title-rock {
+  color: grey;
+}
+
+.title-paper {
+  color: sandybrown;
+}
+
+.title-scissors {
+  color: firebrick;
+}
+
+.title-lizard {
+  color: green;
+}
+
+.title-spock {
+  color: deepskyblue;
+}
+
+button {
+  box-sizing: border-box;
+  border: 5px black solid;
+  font-size: 28px;
+  margin: 10px;
+}
+
+.rock:hover {
+  background-color: grey;
+}
+.paper:hover {
+  background-color: sandybrown;
+}
+
+.scissors:hover {
+  background-color: firebrick;
+}
+
+.lizard:hover {
+  background-color: green;
+}
+
+.spock:hover {
+  background-color: deepskyblue;
+}
+
+.resetScore:hover {
+  background-color: red;
+}
+
+.player-buttons {
+  text-align: center;
+}
+
+.scores {
+  text-align: center;
+  font-size: 50px;
+}
+
+.game {
+  box-sizing: border-box;
+  margin: 30px auto;
+  padding: 20px;
+  width: 30%;
+  text-align: left;
+  border: 5px black solid;
+  font-size: 50px;
+}
+
+#computer {
+  color: slateblue;
+}
+
+#player {
+  color: skyblue;
+}
+
+#resColor {
+  color: chocolate;
+}
+
+.draw {
+  font-size: 50px;
+  color: #ffff4d;
+  margin: 0;
+}
+
+.win {
+  font-size: 50px;
+  color: lawngreen;
+  margin: 0;
+}
+
+.lose {
+  font-size: 50px;
+  color: red;
+  margin: 0;
+}
