@@ -1,6 +1,11 @@
 {% extends 'layout.html' %}
-{% include 'jumbotron.html' %}
 {% block content %}
+ <div class="jumbotron">
+      <div class="container text-center">
+        <h1 class="display-2">{{ page_title }}</h1>
+        <p class="lead">{{ lead_phrase }}</p>
+      </div>
+    </div>
 <div class="container">
   <div class="row">
     <div class="col-3">
