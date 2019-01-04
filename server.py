@@ -16,7 +16,7 @@ def home():
 def typing_test():
     return render_template('typingtest.html',
                            page_title="typingTest",
-                           lead_phrase="How fast can You type?!",
+                           lead_phrase="How many words can you type in a minute?",
                            )
 
 
